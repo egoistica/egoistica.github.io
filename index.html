@@ -1,52 +1,177 @@
-dxvx<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт Артёма</title>
+    <title>Сайт-визитка Артёма Кузнецова</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+        }
+        .navbar {
+            background: linear-gradient(90deg, #4a90e2, #63b3ed);
+            padding: 1rem;
+            border-bottom: 2px solid #3a7bd5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .navbar .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .nav-buttons a,
+        .navbar .lang-buttons button {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            border-radius: 0.25rem;
+            background-color: #3a7bd5;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar .nav-buttons a:hover,
+        .navbar .lang-buttons button:hover {
+            background-color: #2c5aa0;
+            transform: scale(1.05);
+        }
+        .navbar .lang-buttons {
+            margin-left: 1rem;
+        }
+        .header {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 0.5rem;
+            margin: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header p {
+            color: #333;
+            font-size: 1.1rem;
+        }
+        .container {
+            display: flex;
+            padding: 2rem;
+            gap: 1rem;
+        }
+        .main-content {
+            flex: 3;
+        }
+        .column {
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .first-column {
+            background-color: #ffffff;
+        }
+        .second-column {
+            background-color: #e6ffe6;
+        }
+        .side-column {
+            flex: 1;
+            max-width: 200px;
+            background-color: #ffe6f0;
+            border-radius: 0.5rem;
+        }
+        .column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+        }
+        .footer {
+            background: linear-gradient(135deg, #e6ffe6, #c2e0c6);
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .footer p {
+            color: #2d6a4f;
+            margin: 0.25rem 0;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <header class ="header"> 
-        Сайт Артёма Кузнецова
-        <p>
-            Погнали
-        </p>
-        <nav>
-            <ul>
-                <li><a href="./blog.html">Блог</a></li>
-                <li>Проекты</li>
-                <li>Доклады</li>
-                <li>Резюме</li>
-            </ul>
-        </nav>
+    <div class="navbar">
+        <div class="title">Сайт-визитка Артёма Кузнецова</div>
+        <div class="nav-buttons">
+            <a href="#">Главная</a>
+            <a href="#">Страница2</a>
+            <a href="#">Страница3</a>
+            <a href="#">Контакты</a>
+            <div class="lang-buttons">
+                <button onclick="changeLanguage('ru')">RU</button>
+                <button onclick="changeLanguage('en')">EN</button>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <p>Завари себе кофию да надкуси булочку, почитывая мой блог</p>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <div class="column first-column">
+                <h2>Первый блок</h2>
+                <p>Тут будет краткая информация обо мне</p>
+                <p>Например что я занимаюсь фронтендом больше пяти лет, а разработкой уже 10 лет</p>
+                <img src="https://cdnn21.img.ria.ru/images/07e7/07/07/1882869768_0:0:1280:720_768x0_80_0_0_71dcbdbda6d4439b444a73342538b98a.jpg.webp" alt="Техник">
+            </div>
+            <div class="column second-column">
+                <h2>Второй блок</h2>
+            </div>
+        </div>
+        <div class="column side-column">
+            <h2>Боковой блок</h2>
+            <p>Статья о котиках и способах их дрессировки</p>
+            <p>Статья о тестах во фронте</p>
+            <p>Статья о флексбоксах</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Пока не придумала о чем он будет</p>
+        <p>а сюда я добавлю ссылки на мои соцсети и пихтаб</p>
+        <p>Питахб Телеграмм Линкедин</p>
+    </div>
 
-    </header>
-
-    <main class ="main"> 
-
-        <article>
-            <h1>Статья о тестах</h1>
-            <p>Статья о Других тестах</p>
-            
-        </article>
-
-        <p>
-            Тут кратко обо мне
-        </p>
-        <img src="" alt="">
-    </main>
-
-    <aside class ="aside">
-        <section>Статья 1</section>
-        <section>Статья 2</section>
-        <section>Статья 3</section>
-    </aside>
-    
-    <footer class ="footer">
-        <a href="">ТГ</a>
-        <a href="">Инст</a>
-        <a href="">Гитхаб</a>
-    </footer>
-
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'en') {
+                document.querySelector('.title').textContent = "Artem Kuznetsov's Website";
+                document.querySelector('.header p').textContent = "Brew some coffee and bite a bun while reading my blog";
+                document.querySelectorAll('.footer p')[0].textContent = "I haven’t figured out what it will be about yet";
+                document.querySelectorAll('.footer p')[1].textContent = "I will add links to my social media and GitHub here";
+                document.querySelectorAll('.footer p')[2].textContent = "GitHub Telegram LinkedIn";
+            } else {
+                document.querySelector('.title').textContent = "Сайт-визитка Артёма Кузнецова";
+                document.querySelector('.header p').textContent = "Завари себе кофию да надкуси булочку, почитывая мой блог";
+                document.querySelectorAll('.footer p')[0].textContent = "Пока не придумала о чем он будет";
+                document.querySelectorAll('.footer p')[1].textContent = "а сюда я добавлю ссылки на мои соцсети и пихтаб";
+                document.querySelectorAll('.footer p')[2].textContent = "Питахб Телеграмм Линкедин";
+            }
+        }
+    </script>
 </body>
 </html>

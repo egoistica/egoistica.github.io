@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне - Артём Кузнецов</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="z-depth-0">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo logo">Portfolio</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="bi bi-list"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 l7">
+                    <h2 class="section-title">About<span>Me</span></h2>
+                    <div class="about-name">Артём Кузнецов</div>
+                    <p class="about-description flow-text">
+                        Привет! Мне 18 лет, я студент направления «Программная инженерия» и обучаюсь в университете. Меня вдохновляет программирование, веб-разработка и то, как технологии меняют наш мир.<br><br>
+                        Использую их для учебных проектов, практики алгоритмов и создания приложений. Также изучаю основы веб-разработки: HTML, CSS и JavaScript — хочу научиться создавать удобные и красивые сайты.<br><br>
+                        Мне интересны как техническая сторона программирования, так и креативные направления, например, графический дизайн. Я открыт для новых знаний и стремлюсь применять их в реальных проектах в будущем.
+                    </p>
+                </div>
+                <div class="col s12 l5">
+                    <figure class="about-image center-align">
+                        <img src="assets/images/avatarAbout.jpg" alt="Артём Кузнецов" class="secondary-image responsive-img circle">
+                        <figcaption class="sr-only">Дополнительная фотография Артёма Кузнецова</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-info center-align">
+                <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <span>arkuznec.13@mail.ru</span>
+                </div>
+            </div>
+
+            <div class="social-links center-align">
+                <a href="https://www.instagram.com/kuznecoff.artem/" class="btn-floating waves-effect waves-light"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/egoistica" class="btn-floating waves-effect waves-light"><i class="bi bi-github"></i></a>
+                <a href="https://t.me/lox174" class="btn-floating waves-effect waves-light"><i class="bi bi-telegram"></i></a>
+            </div>
+
+            <p class="footer-text center-align">developed with egoistica</p>
+        </div>
+    </footer>
+
+    <div class="scroll-to-top">
+        <a class="btn-floating btn-large" onclick="scrollToTop()">
+            <i class="bi bi-arrow-up"></i>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.onscroll = function() {
+            const scrollButton = document.querySelector('.scroll-to-top');
+            if (document.documentElement.scrollTop > 300) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html> 
